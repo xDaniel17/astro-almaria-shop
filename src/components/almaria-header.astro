@@ -17,14 +17,9 @@
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
                             <a
-                                href="#"
+                                href=""
                                 class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
                                 aria-current="page">Catalogo de productos</a
-                            >
-                            <a
-                                href="#"
-                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                                >Promociones</a
                             >
                             <a
                                 href="#"
@@ -110,11 +105,6 @@
                 <a
                     href="#"
                     class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >Promociones</a
-                >
-                <a
-                    href="#"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                     >Acerca de nosotros</a
                 >
             </div>
@@ -151,9 +141,7 @@
     document.addEventListener("DOMContentLoaded", function () {
         const mobileMenuButton = document.querySelector(".md\\:hidden button");
         const mobileMenu = document.getElementById("mobile-menu");
-        const notificationButton = document.querySelector(
-            ".ml-4 .relative button",
-        );
+
         const body = document.body;
 
         mobileMenuButton.addEventListener("click", function () {
@@ -174,9 +162,6 @@
             "py-3",
             "border-t",
             "border-gray-700",
-        );
-        mobileNotificationContainer.appendChild(
-            notificationButton.cloneNode(true),
         );
         mobileMenu.appendChild(mobileNotificationContainer);
     });

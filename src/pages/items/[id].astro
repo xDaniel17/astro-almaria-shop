@@ -1,0 +1,179 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import AlmariaFooter from "../../components/almaria-footer.astro";
+import AlmariaHeader from "../../components/almaria-header.astro";
+
+export async function getStaticPaths() {
+    const items = await getCollection("items");
+
+    return items.map((item) => ({
+        params: { id: item.slug },
+        props: { item },
+    }));
+}
+
+const { item } = Astro.props;
+const { data, slug } = item;
+const {
+    title,
+    description,
+    isSale,
+    isStock,
+    creationDate,
+    price,
+    regularPrice,
+    material,
+    image,
+    sizes,
+} = data;
+
+export const prerender = true;
+---
+
+<Layout title="Almaria Shop" description="Almaria Shop - ropa y accesorios">
+    <div class="flex flex-col min-h-screen">
+        <AlmariaHeader />
+        <main class="bg-white dark:bg-gray-900 flex-grow">
+            <div
+                class="mx-auto max-w-2xl px-4 py-8 sm:px-6 sm:py-8 lg:max-w-7xl lg:px-8"
+            >
+                <article
+                    class="mx-auto max-w-2xl px-4 py-8 sm:px-6 sm:py-8 lg:max-w-7xl lg:px-8"
+                >
+                    <h2
+                        class="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100"
+                    >
+                        Detalles del producto
+                    </h2>
+                    <div
+                        class="mt-6 flex flex-col items-center lg:flex-row gap-x-1 gap-y-10"
+                    >
+                        <aside class="lg:w-1/2 flex-grow">
+                            <div
+                                id="default-carousel"
+                                class="relative"
+                                data-carousel="slide"
+                            >
+                                <div
+                                    class="relative h-56 overflow-hidden rounded-lg md:h-96"
+                                >
+                                    {
+                                        image.map((img, index) => (
+                                            <div
+                                                class="hidden duration-700 ease-in-out"
+                                                data-carousel-item
+                                                data-key={index}
+                                            >
+                                                <img
+                                                    transition:name={`img-${slug}`}
+                                                    src={img}
+                                                    alt={description}
+                                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                                />
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+
+                                {
+                                    isSale && (
+                                        <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
+                                            Oferta
+                                        </span>
+                                    )
+                                }
+                                {
+                                    new Date().getTime() -
+                                        new Date(creationDate).getTime() <
+                                        30 * 24 * 60 * 60 * 1000 && (
+                                        <span class="absolute top-2 right-2 bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded">
+                                            Nuevo
+                                        </span>
+                                    )
+                                }
+                            </div>
+                        </aside>
+
+                        <div class="lg:w-1/2 flex flex-col text-center">
+                            <h3
+                                class="text-2xl font-bold text-gray-900 dark:text-gray-100"
+                            >
+                                {title}
+                            </h3>
+                            <p class="mt-2 text-gray-600 dark:text-gray-400">
+                                {description}
+                            </p>
+                            <p class="mt-2 text-gray-500 dark:text-gray-400">
+                                Material: {material}
+                            </p>
+                            <div class="mt-4">
+                                {
+                                    isSale ? (
+                                        <div class="text-lg font-medium text-gray-900 dark:text-gray-100">
+                                            <p>
+                                                <span class="line-through text-gray-500 dark:text-gray-400">
+                                                    ${regularPrice}
+                                                </span>
+                                            </p>
+                                            <p>
+                                                <span class="text-red-500">
+                                                    (Descuento:{" "}
+                                                    {Math.round(
+                                                        (1 -
+                                                            price /
+                                                                regularPrice) *
+                                                            100,
+                                                    )}
+                                                    %)
+                                                </span>
+                                                ${price}
+                                            </p>
+                                        </div>
+                                    ) : (
+                                        <p class="text-xl font-medium text-gray-900 dark:text-gray-100">
+                                            ${price}
+                                        </p>
+                                    )
+                                }
+                            </div>
+                            <div class="mt-4">
+                                <h4
+                                    class="text-sm font-medium text-gray-700 dark:text-gray-300"
+                                >
+                                    Tallas disponibles:
+                                </h4>
+                                <div
+                                    class="flex flex-wrap gap-2 mt-2 justify-center"
+                                >
+                                    {
+                                        sizes.map((size) => (
+                                            <span
+                                                id={size}
+                                                class="px-2 py-1 border rounded text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-700 hover:scale-110"
+                                            >
+                                                {size}
+                                            </span>
+                                        ))
+                                    }
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <a
+                                    href="https://wa.me/50375438029"
+                                    class="px-4 py-2 bg-green-700 text-white font-semibold rounded hover:bg-green-500 dark:bg-green-700 dark:hover:bg-green-600"
+                                >
+                                    Consultar
+                                    <i
+                                        class="fab fa-whatsapp ml-2 text-xl"
+                                        aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </div>
+    <AlmariaFooter />
+</Layout>

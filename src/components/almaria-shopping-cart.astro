@@ -18,67 +18,78 @@ const items = await getCollection("items");
             {
                 items
                     .filter((item) => item.data.isStock)
-                    .map((item) => (
-                        <div class="group relative" data-key={item.id}>
-                            <img
-                                src={item.data.image[0]}
-                                alt={item.data.description}
-                                class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80 main-image"
-                            />
-                            {item.data.isSale && (
-                                <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
-                                    Oferta
-                                </span>
-                            )}
-                            {new Date().getTime() -
-                                item.data.creationDate.getTime() <
-                                30 * 24 * 60 * 60 * 1000 && (
-                                <span class="absolute top-2 right-2 bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded">
-                                    Nuevo
-                                </span>
-                            )}
-                            <div class="mt-4 flex justify-between">
-                                <div>
-                                    <h3 class="text-sm text-gray-700 dark:text-gray-300">
-                                        <a href="#">
-                                            <span
-                                                aria-hidden="true"
-                                                class="absolute inset-0"
-                                            />
-                                            {item.data.title}
-                                        </a>
-                                    </h3>
-                                </div>
-                                {item.data.isSale ? (
-                                    <div class="text-end text-sm font-medium text-gray-900 dark:text-gray-100">
-                                        <p>
-                                            <span class="line-through text-gray-500 dark:text-gray-400">
-                                                ${item.data.regularPrice}
-                                            </span>
-                                        </p>
-                                        <p>
-                                            <span class="text-red-500">
-                                                (Descuento:
-                                                {Math.round(
-                                                    (1 -
-                                                        item.data.price /
-                                                            item.data
-                                                                .regularPrice) *
-                                                        100,
-                                                )}
-                                                %)
-                                            </span>
-                                            ${item.data.price}
-                                        </p>
-                                    </div>
-                                ) : (
-                                    <p class="text-sm font-medium text-gray-900 dark:text-gray-100">
-                                        ${item.data.price}
-                                    </p>
+                    .map((item) => {
+                        const { data, slug } = item;
+                        const {
+                            title,
+                            description,
+                            isSale,
+                            creationDate,
+                            price,
+                            regularPrice,
+                            image,
+                        } = data;
+                        return (
+                            <article class="group relative" data-key={item.id}>
+                                <img
+                                    src={image[0]}
+                                    alt={description}
+                                    transition:name={`img-${slug}`}
+                                    class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80 main-image"
+                                />
+                                {isSale && (
+                                    <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
+                                        Oferta
+                                    </span>
                                 )}
-                            </div>
-                        </div>
-                    ))
+                                {new Date().getTime() - creationDate.getTime() <
+                                    30 * 24 * 60 * 60 * 1000 && (
+                                    <span class="absolute top-2 right-2 bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded">
+                                        Nuevo
+                                    </span>
+                                )}
+                                <div class="mt-4 flex justify-between">
+                                    <div>
+                                        <h3 class="text-sm text-gray-700 dark:text-gray-300">
+                                            <a href={`/items/${slug}`}>
+                                                <span
+                                                    aria-hidden="true"
+                                                    class="absolute inset-0"
+                                                />
+                                                {title}
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    {isSale ? (
+                                        <div class="text-end text-sm font-medium text-gray-900 dark:text-gray-100">
+                                            <p>
+                                                <span class="line-through text-gray-500 dark:text-gray-400">
+                                                    ${regularPrice}
+                                                </span>
+                                            </p>
+                                            <p>
+                                                <span class="text-red-500">
+                                                    (Descuento:
+                                                    {Math.round(
+                                                        (1 -
+                                                            price /
+                                                                regularPrice) *
+                                                            100,
+                                                    )}
+                                                    %)
+                                                </span>
+                                                ${item.data.price}
+                                            </p>
+                                        </div>
+                                    ) : (
+                                        <p class="text-sm font-medium text-gray-900 dark:text-gray-100">
+                                            ${price}
+                                        </p>
+                                    )}
+                                </div>
+                            </article>
+                        );
+                    })
             }
         </div>
     </div>
