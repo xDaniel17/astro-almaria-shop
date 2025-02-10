@@ -1,9 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ShoppingCart from "../components/shopping-cart.astro";
+import AlmariaShoppingCart from "../components/almaria-shopping-cart.astro";
+import AlmariaHeader from "../components/almaria-header.astro";
+import AlmariaFooter from "../components/almaria-footer.astro";
 ---
 
 <Layout title="Home">
-    <h1>Home</h1>
-    <ShoppingCart />
+    <div class="flex flex-col min-h-screen">
+        <AlmariaHeader />
+        <AlmariaShoppingCart />
+        <AlmariaFooter />
+    </div>
 </Layout>
