@@ -1,6 +1,41 @@
 ---
 import { getCollection } from "astro:content";
+import { useState } from "preact/hooks";
+
 const items = await getCollection("items");
+const [sortBy, setSortBy] = useState<string>("nuevo");
+
+const handleSortChange = (e: Event) => {
+    const target = e.target as HTMLSelectElement;
+    setSortBy(target.value);
+};
+
+const sortItems = (items: any[], sortBy: string) => {
+    switch (sortBy) {
+        case "nuevo":
+            return [...items].sort(
+                (a, b) => b.data.creationDate - a.data.creationDate,
+            );
+        case "descuento":
+            return [...items].sort((a, b) => {
+                const discountA = a.data.isSale
+                    ? 1 - a.data.price / a.data.regularPrice
+                    : 0;
+                const discountB = b.data.isSale
+                    ? 1 - b.data.price / b.data.regularPrice
+                    : 0;
+                return discountB - discountA;
+            });
+        case "precioAsc":
+            return [...items].sort((a, b) => a.data.price - b.data.price);
+        case "precioDesc":
+            return [...items].sort((a, b) => b.data.price - a.data.price);
+        default:
+            return items;
+    }
+};
+
+const sortedItems = sortItems(items, sortBy);
 ---
 
 <main class="bg-white dark:bg-gray-900 flex-grow">
@@ -12,17 +47,42 @@ const items = await getCollection("items");
         >
             Nuestros productos
         </h2>
-        <div
-            class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
-        >
-            {
-                items.map((item) => (
+
+        <div class="flex justify-end mb-4">
+            <select class="form-select block w-full mt-1" value={sortBy}>
+                <option value="nuevo">Nuevo</option>
+                <option value="descuento">Descuento</option>
+                <option value="precioAsc">Precio: Menor a Mayor</option>
+                <option value="precioDesc">Precio: Mayor a Menor</option>
+            </select>
+        </div>
+    </div>
+
+    <div
+        class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
+    >
+        {
+            sortedItems
+                .filter((item) => item.data.isStock)
+                .map((item) => (
                     <div class="group relative" data-key={item.id}>
                         <img
                             src={item.data.image[0]}
                             alt={item.data.description}
                             class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80 main-image"
                         />
+                        {item.data.isSale && (
+                            <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
+                                Oferta
+                            </span>
+                        )}
+                        {new Date().getTime() -
+                            item.data.creationDate.getTime() <
+                            30 * 24 * 60 * 60 * 1000 && (
+                            <span class="absolute top-2 right-2 bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded">
+                                Nuevo
+                            </span>
+                        )}
                         <div class="mt-4 flex justify-between">
                             <div>
                                 <h3 class="text-sm text-gray-700 dark:text-gray-300">
@@ -35,13 +95,36 @@ const items = await getCollection("items");
                                     </a>
                                 </h3>
                             </div>
-                            <p class="text-sm font-medium text-gray-900 dark:text-gray-100">
-                                ${item.data.price}
-                            </p>
+                            {item.data.isSale ? (
+                                <div class="text-end text-sm font-medium text-gray-900 dark:text-gray-100">
+                                    <p>
+                                        <span class="line-through text-gray-500 dark:text-gray-400">
+                                            ${item.data.regularPrice}
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span class="text-red-500">
+                                            (Descuento:{" "}
+                                            {Math.round(
+                                                (1 -
+                                                    item.data.price /
+                                                        item.data
+                                                            .regularPrice) *
+                                                    100,
+                                            )}
+                                            %)
+                                        </span>
+                                        ${item.data.price}
+                                    </p>
+                                </div>
+                            ) : (
+                                <p class="text-sm font-medium text-gray-900 dark:text-gray-100">
+                                    ${item.data.price}
+                                </p>
+                            )}
                         </div>
                     </div>
                 ))
-            }
-        </div>
+        }
     </div>
 </main>
