@@ -2,7 +2,7 @@
 id: vestido-negro
 title: Vestido negro
 regularPrice: 30
-price: 25
+price: 55
 image: 
   - ./vestido-azul.jpg,
   - ./vestiodo-azul2.jpg

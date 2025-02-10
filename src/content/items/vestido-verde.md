@@ -2,7 +2,7 @@
 id: vestido-verde
 title: Vestido verde
 regularPrice: 30
-price: 25
+price: 15
 image: 
   - ./vestido-azul.jpg,
   - ./vestiodo-azul2.jpg
