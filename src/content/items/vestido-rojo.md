@@ -1,25 +1,19 @@
 ---
 id: vestido-rojo
 title: Vestido rojo
-description: Elegante vestido rojo para ocasiones especiales
-images:
-- ./vestido-rojo.jpg
-- ./vestido-rojo2.jpg
-price: 89.99
-sizes:
-- XS
-- S
-- M
-- L
-- XL
-material: 95% poliéster, 5% elastano
-care: Lavar a máquina, temperatura máxima 30°C
-features:
-- Corte ajustado
-- Manga larga
-- Cierre con cremallera
-- Diseño elegante
-stock: 15
-category: vestidos
+regularPrice: 30
+price: 25
+image: 
+  - ./vestido-azul.jpg,
+  - ./vestiodo-azul2.jpg
+description: Vestido azul con estampado de flores. Talla M.
+material: Poliéster
+sizes: 
+  - M
+  - L
+  - XL
+creationDate: 2021/10/10
+isSale: false
+isStock: true
 ---
 
