@@ -4,8 +4,8 @@ title: Vestido negro
 regularPrice: 30
 price: 55
 image: 
-  - ./vestido-azul.jpg,
-  - ./vestiodo-azul2.jpg
+  - ./vestido-negro.webp
+  - ./vestido-negro-01.jpg
 description: Vestido azul con estampado de flores. Talla M.
 material: Poliéster
 sizes: 

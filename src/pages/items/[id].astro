@@ -1,5 +1,5 @@
 ---
-import { getCollection, render } from "astro:content";
+import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import AlmariaFooter from "../../components/almaria-footer.astro";
 import AlmariaHeader from "../../components/almaria-header.astro";
@@ -60,24 +60,24 @@ export const prerender = true;
                                 class="relative"
                                 data-carousel="slide"
                             >
-                                <div
-                                    class="relative h-56 overflow-hidden rounded-lg md:h-96"
-                                >
+                                <div class="relative h-56 rounded-lg md:h-96">
                                     {
-                                        image.map((img, index) => (
-                                            <div
-                                                class="hidden duration-700 ease-in-out"
-                                                data-carousel-item
-                                                data-key={index}
-                                            >
+                                        image.map((img, index) =>
+                                            index === 0 ? (
                                                 <img
                                                     transition:name={`img-${slug}`}
-                                                    src={img}
+                                                    src={`/${img}`}
                                                     alt={description}
-                                                    class="aspect-square absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                                    class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-100 main-image"
                                                 />
-                                            </div>
-                                        ))
+                                            ) : (
+                                                <img
+                                                    src={`/${img}`}
+                                                    alt={description}
+                                                    class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-100 main-image"
+                                                />
+                                            ),
+                                        )
                                     }
                                 </div>
 
@@ -168,12 +168,9 @@ export const prerender = true;
                             <div class="mt-6">
                                 <a
                                     href="https://wa.me/50375438029"
-                                    class="px-4 py-2 bg-green-700 text-white font-semibold rounded hover:bg-green-500 dark:bg-green-700 dark:hover:bg-green-600"
+                                    class="px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-600"
                                 >
                                     Consultar
-                                    <i
-                                        class="fab fa-whatsapp text-xl"
-                                        aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>

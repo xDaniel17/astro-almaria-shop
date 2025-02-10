@@ -4,8 +4,8 @@ title: Vestido amarillo
 regularPrice: 30
 price: 25
 image: 
-  - ./vestido-azul.jpg,
-  - ./vestiodo-azul2.jpg
+  - ./vestido-amarillo.webp
+  - ./vestido-amarillo-01.jpg
 description: Vestido azul con estampado de flores. Talla M.
 material: Poliéster
 sizes: 

@@ -4,8 +4,8 @@ title: Vestido verde
 regularPrice: 30
 price: 15
 image: 
-  - ./vestido-azul.jpg,
-  - ./vestiodo-azul2.jpg
+  - ./vestido-verde.webp
+  - ./vestido-verde-01.jpg
 description: Vestido azul con estampado de flores. Talla M.
 material: Poliéster
 sizes: 
