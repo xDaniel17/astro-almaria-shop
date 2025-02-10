@@ -46,6 +46,9 @@ export const prerender = true;
                     >
                         Detalles del producto
                     </h2>
+                    <a href="/" class="hover:underline opacity-90"
+                        >← Volver atrás</a
+                    >
                     <div
                         class="mt-6 flex flex-col items-center lg:flex-row gap-x-1 gap-y-10"
                     >
@@ -69,7 +72,7 @@ export const prerender = true;
                                                     transition:name={`img-${slug}`}
                                                     src={img}
                                                     alt={description}
-                                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                                    class="aspect-square absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                                                 />
                                             </div>
                                         ))
@@ -104,7 +107,9 @@ export const prerender = true;
                             <p class="mt-2 text-gray-600 dark:text-gray-400">
                                 {description}
                             </p>
-                            <p class="mt-2 text-gray-500 dark:text-gray-400">
+                            <p
+                                class="mt-2 text-sm text-gray-500 dark:text-gray-400"
+                            >
                                 Material: {material}
                             </p>
                             <div class="mt-4">
