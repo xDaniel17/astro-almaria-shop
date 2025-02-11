@@ -52,26 +52,27 @@ export const prerender = true;
                         >← Volver atrás</a
                     >
                     <div
-                        class="mt-6 flex flex-col items-center lg:flex-row gap-x-4 gap-y-10"
+                        class="mt-6 flex flex-col lg:flex-row gap-x-4 gap-y-10"
                     >
                         <aside class="w-full lg:w-1/2">
                             <article class="group relative hover:scale-105">
                                 {
-                                    image.map((img, index) =>
-                                        index === 0 ? (
-                                            <img
-                                                transition:name={`img-${slug}`}
-                                                src={`/${img}`}
-                                                alt={description}
-                                                class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-100 main-image"
-                                            />
-                                        ) : (
-                                            <img
-                                                src={`/${img}`}
-                                                alt={description}
-                                                class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-100 main-image"
-                                            />
-                                        ),
+                                    image.map(
+                                        (img, index) =>
+                                            index === 0 ? (
+                                                <img
+                                                    transition:name={`img-${slug}`}
+                                                    src={`/public/items/${img}`}
+                                                    alt={description}
+                                                    class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-100 main-image"
+                                                />
+                                            ) : null,
+                                        // : (
+                                        //     <img
+                                        //         alt={description}
+                                        //         class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-100 main-image"
+                                        //     />
+                                        // ),
                                     )
                                 }
 
@@ -94,7 +95,9 @@ export const prerender = true;
                             </article>
                         </aside>
 
-                        <div class="w-full lg:w-1/2 flex flex-col text-center">
+                        <div
+                            class="w-full lg:w-1/2 flex flex-col text-center pt-12"
+                        >
                             <h3
                                 class="text-2xl font-bold text-gray-900 dark:text-gray-100"
                             >
@@ -119,7 +122,7 @@ export const prerender = true;
                                                 </span>
                                             </p>
                                             <p>
-                                                <span class="text-red-500">
+                                                {/* <span class="text-red-500">
                                                     (Descuento:{" "}
                                                     {Math.round(
                                                         (1 -
@@ -128,13 +131,13 @@ export const prerender = true;
                                                             100,
                                                     )}
                                                     %)
-                                                </span>
-                                                ${price}
+                                                </span> */}
+                                                ${price.toFixed(2)}
                                             </p>
                                         </div>
                                     ) : (
                                         <p class="text-xl font-medium text-gray-900 dark:text-gray-100">
-                                            ${price}
+                                            ${price.toFixed(2)}
                                         </p>
                                     )
                                 }
@@ -153,7 +156,7 @@ export const prerender = true;
                                         sizes.map((size) => (
                                             <span
                                                 id={size}
-                                                class="px-2 py-1 border rounded text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-700 hover:scale-110"
+                                                class="px-2 py-1 border rounded text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-700 hover:scale-110 cursor-pointer"
                                             >
                                                 {size}
                                             </span>

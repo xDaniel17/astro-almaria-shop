@@ -58,7 +58,7 @@ const sortedItems = items
                             >
                                 <img
                                     transition:name={`img-${slug}`}
-                                    src={image[0]}
+                                    src={`/public/items/${image[0]}`}
                                     alt={description}
                                     class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80 main-image"
                                 />
@@ -76,7 +76,7 @@ const sortedItems = items
                                 )}
                                 <div class="mt-4 flex justify-between">
                                     <div>
-                                        <h3 class="text-sm text-gray-700 dark:text-gray-300">
+                                        <h3 class="text-gray-700 dark:text-gray-300">
                                             <a href={`/items/${slug}`}>
                                                 <span
                                                     aria-hidden="true"
@@ -93,23 +93,11 @@ const sortedItems = items
                                                     ${regularPrice}
                                                 </span>
                                             </p>
-                                            <p>
-                                                <span class="text-red-500">
-                                                    (Descuento:
-                                                    {Math.round(
-                                                        (1 -
-                                                            price /
-                                                                regularPrice) *
-                                                            100,
-                                                    )}
-                                                    %)
-                                                </span>
-                                                ${price}
-                                            </p>
+                                            <p>${price.toFixed(2)}</p>
                                         </div>
                                     ) : (
                                         <p class="text-sm font-medium text-gray-900 dark:text-gray-100">
-                                            ${price}
+                                            ${price.toFixed(2)}
                                         </p>
                                     )}
                                 </div>
