@@ -6,7 +6,7 @@ price: 70.75
 image: 
 - vestido-corto-redblack-1.png
 - vestido-corto-redblack-2.png
-description: Vestido corto, zipper en espalda, bombacho en parte de abajo
+description: Vestido corto, zipper en espalda, bombacho en parte de abajo.
 material: Poliester 
 sizes: 
 - S
