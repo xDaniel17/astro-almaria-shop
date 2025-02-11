@@ -6,7 +6,7 @@ price: 41.70
 image: 
     - ./vestido-cotton-pink-1.jpg
     - ./vestido-cotton-pink-2.jpg
-description: Vestido corto, cuello V, manga corta con revuelo
+description: Vestido corto, cuello V, manga corta con revuelo.
 material: Poliester
 sizes: 
     - S

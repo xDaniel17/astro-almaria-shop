@@ -6,7 +6,7 @@ price: 54.70
 image: 
     - ./vestido-maxi-cobalt-blue-plus-1.jpg
     - ./vestido-maxi-cobalt-blue-plus-2.jpg
-description: Vestido maxi, cuello V, elástico en  cintura y bolsas a los lados
+description: Vestido maxi, cuello V, elástico en  cintura y bolsas a los lados.
 material: Algodón
 sizes: 
     - XL
