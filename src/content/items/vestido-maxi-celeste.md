@@ -6,7 +6,7 @@ price: 66.11
 image: 
     - ./vestido-maxi-celeste-1.jpg
     - ./vestido-maxi-celeste-2.jpg  
-description: Vestido maxi, cuello V, elástico en busto y cintura 
+description: Vestido maxi, cuello V, elástico en busto y cintura.
 material: Algodón
 sizes: 
 - S
