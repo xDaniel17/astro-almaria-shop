@@ -1,6 +1,6 @@
 ---
 id: vestido-plus-corto-dutsy-rose
-title: Vestido Plus Corto  
+title: Vestido Dusty Rose 
 regularPrice: 46.70
 price: 46.70
 image: 

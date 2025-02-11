@@ -34,7 +34,7 @@ export const prerender = true;
 <Layout title="Almaria Shop" description="Almaria Shop - ropa y accesorios">
     <div class="flex flex-col min-h-screen">
         <AlmariaHeader />
-        <main class="bg-white dark:bg-gray-900 flex-grow">
+        <main class="bg-white dark:bg-[rgb(35,37,40)] flex-grow">
             <div
                 class="mx-auto max-w-2xl px-4 py-8 sm:px-6 sm:py-8 lg:max-w-7xl lg:px-8"
             >
@@ -78,7 +78,7 @@ export const prerender = true;
 
                                 {
                                     isSale && (
-                                        <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
+                                        <span class="absolute top-2 left-2 bg-red-500 text-white font-semibold px-2 py-1 rounded">
                                             Oferta
                                         </span>
                                     )
@@ -87,7 +87,7 @@ export const prerender = true;
                                     new Date().getTime() -
                                         new Date(creationDate).getTime() <
                                         30 * 24 * 60 * 60 * 1000 && (
-                                        <span class="absolute top-2 right-2 bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded">
+                                        <span class="absolute top-2 right-2 bg-green-500 text-white font-semibold px-2 py-1 rounded">
                                             Nuevo
                                         </span>
                                     )
@@ -103,11 +103,13 @@ export const prerender = true;
                             >
                                 {title}
                             </h3>
-                            <p class="mt-2 text-gray-600 dark:text-gray-400">
+                            <p
+                                class="mt-2 text-gray-600 text-lg dark:text-gray-400"
+                            >
                                 {description}
                             </p>
                             <p
-                                class="mt-2 text-sm text-gray-500 dark:text-gray-400"
+                                class="mt-2 text text-gray-500 dark:text-gray-400"
                             >
                                 Material: {material}
                             </p>
@@ -169,9 +171,9 @@ export const prerender = true;
                                 <a
                                     target="_blank"
                                     href={`https://wa.me/50375438029?text=Buen%20día,%20quería%20consultar%20sobre%20el%20${title}`}
-                                    class="px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 dark:bg-blue-400 dark:hover:bg-blue-600"
+                                    class="px-4 py-2 bg-[rgb(112,142,174)] text-white font-semibold rounded hover:bg-gray-600 dark:hover:bg-[rgb(148,106,105)] dark:bg-[rgb(188,142,150)]"
                                 >
-                                    Consultar
+                                    Pedir por Whatsapp
                                 </a>
                             </div>
                         </div>

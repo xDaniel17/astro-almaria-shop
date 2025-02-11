@@ -2,23 +2,21 @@
 
 ---
 
-<header class="bg-white dark:bg-gray-900">
-    <nav class="bg-gray-800">
+<header class="bg-[rgb(112,142,174)] dark:bg-gray-800">
+    <nav>
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between">
                 <div class="flex items-center">
                     <div class="shrink-0">
-                        <img
-                            class="size-8"
-                            src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                            alt="Logo Almaria"
-                        />
+                        <img class="logo-almaria" alt="Logo Almaria" />
                     </div>
                     <div class="hidden md:block">
-                        <div class="ml-10 flex items-baseline space-x-4">
+                        <div
+                            class="ml-10 flex items-baseline justify-end space-x-4"
+                        >
                             <a
                                 href="/"
-                                class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                                class="rounded-md border-cyan-300 px-3 py-2 text-m font-medium text-white"
                                 aria-current="page">Catálogo de productos</a
                             >
                             <!-- <a
@@ -136,7 +134,19 @@
         </div>
     </nav>
 </header>
+<style>
+    .logo-almaria {
+        width: 8rem;
+        /* content: url("/logo-almaria-celeste.png"); */
+        content: url("/logo-almaria-blanco.png");
+    }
 
+    @media (prefers-color-scheme: dark) {
+        .logo-almaria {
+            content: url("/logo-almaria-blanco.png");
+        }
+    }
+</style>
 <script type="module">
     document.addEventListener("DOMContentLoaded", function () {
         const mobileMenuButton = document.querySelector(".md\\:hidden button");
