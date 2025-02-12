@@ -21,6 +21,8 @@ const sortedItems = items
         // Tercero, ordenar por precio de mayor a menor
         return dataB.price - dataA.price;
     });
+const today = new Date();
+console.log(today);
 ---
 
 <main class="bg-white dark:bg-[rgb(35,37,40)] flex-grow">
@@ -50,6 +52,8 @@ const sortedItems = items
                             price,
                             regularPrice,
                             image,
+                            startDate,
+                            endDate,
                         } = data;
                         return (
                             <article
@@ -86,7 +90,9 @@ const sortedItems = items
                                             </a>
                                         </h3>
                                     </div>
-                                    {isSale ? (
+                                    {isSale &&
+                                    today >= startDate &&
+                                    today <= endDate ? (
                                         <div class="text-end text-sm font-medium text-gray-900 dark:text-gray-100">
                                             <p>
                                                 <span class="line-through text-gray-500 dark:text-gray-400">
@@ -97,7 +103,7 @@ const sortedItems = items
                                         </div>
                                     ) : (
                                         <p class="text-sm font-medium text-gray-900 dark:text-gray-100">
-                                            ${price.toFixed(2)}
+                                            ${regularPrice.toFixed(2)}
                                         </p>
                                     )}
                                 </div>
