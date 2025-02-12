@@ -7,6 +7,7 @@ image:
 - blanco-plus-flores-1.jpg
 - blanco-plus-flores-2.jpg
 description: Vestido blanco con elástico en busco y cintura.
+description: Vestido blanco con elástico en busco y cintura.
 material: Poliester 
 sizes: 
 - xl
