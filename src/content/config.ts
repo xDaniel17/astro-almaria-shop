@@ -13,8 +13,8 @@ const items = defineCollection({
         creationDate: z.string().transform((str) => new Date(str)), // Transform string to Date
         isSale: z.boolean(),
         isStock: z.boolean(),
-        startDate: z.string().transform((str) => new Date(str)).optional(), // Transform string to Date and make optional
-        endDate: z.string().transform((str) => new Date(str)).optional(),   // Transform string to Date and make optional
+        startDate: z.string().transform((str) => new Date(str)), // Transform string to Date and make optional
+        endDate: z.string().transform((str) => new Date(str)),   // Transform string to Date and make optional
     }),
 });
 
