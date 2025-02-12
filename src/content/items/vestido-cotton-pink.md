@@ -2,7 +2,7 @@
 id: vestido-cotton-pink 
 title: Vestido Corto en Tono Rosa Pastel 
 regularPrice: 41.70
-price: 41.70
+price: 35.44
 image: 
     - vestido-cotton-pink-1.jpg
     - vestido-cotton-pink-2.jpg
@@ -12,6 +12,6 @@ sizes:
     - S
     - L
 creationDate: 2025/02/01
-isSale: false
+isSale: true
 isStock: true
 ---

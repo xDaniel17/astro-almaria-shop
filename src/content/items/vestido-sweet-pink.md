@@ -2,7 +2,7 @@
 id: vestido-sweet-pink
 title: Vestido Midi tono Rosa Pastel y Rojo
 regularPrice: 70.75
-price: 70.75
+price: 56.60
 image: 
     - vestido-sweet-pink-1.jpg
     - vestido-sweet-pink-2.jpg
@@ -11,6 +11,6 @@ material: Algodón
 sizes: 
 - S
 creationDate: 2025/02/01
-isSale: false
+isSale: true
 isStock: true
 ---

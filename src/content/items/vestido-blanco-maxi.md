@@ -2,7 +2,7 @@
 id: vestido-blanco-maxi
 title: Vestido Blanco Maxi
 regularPrice: 64.11
-price: 64.11
+price: 51.28
 image:
     - vestido-blanco-maxi-1.png 
     - vestido-blanco-maxi-2.png
@@ -14,6 +14,6 @@ sizes:
     - L
     - XL
 creationDate: 2025/02/01
-isSale: false
+isSale: true
 isStock: true
 ---

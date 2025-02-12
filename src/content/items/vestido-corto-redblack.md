@@ -2,7 +2,7 @@
 id: vestido-corto-redblack
 title: Vestido Red Black 
 regularPrice: 70.75
-price: 56.6
+price: 56.60
 image: 
 - vestido-corto-redblack-1.png
 - vestido-corto-redblack-2.png
