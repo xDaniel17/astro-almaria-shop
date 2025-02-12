@@ -16,6 +16,17 @@ const items = defineCollection({
     }),
 });
 
+const banners = defineCollection({
+    schema: z.object({
+        id: z.string(),
+        title: z.string(),
+        description: z.string(),
+        startDate: z.string().transform((str) => new Date(str)), // Transform string to Date
+        endDate: z.string().transform((str) => new Date(str)),   // Transform string to Date
+    }),
+});
+
 export const collections = {
     items,
+    banners,
 };

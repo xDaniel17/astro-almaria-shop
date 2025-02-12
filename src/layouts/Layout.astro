@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from "astro:transitions";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import "@fontsource/poppins";
 
 interface Props {
 	title: string;
@@ -33,6 +34,11 @@ const {
 			href={new URL("rss.xml", Astro.site)}
 		/> -->
 		<ClientRouter />
+		<style is:global>
+			body {
+				font-family: "Poppins", sans-serif;
+			}
+		</style>
 	</head>
 	<body>
 		<slot />

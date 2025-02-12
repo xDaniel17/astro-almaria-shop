@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+
+const banners = await getCollection("banners");
+
+// Obtener la fecha actual
+const currentDate = new Date();
+
+// Filtrar los banners activos según la fecha actual
+const activeBanners = banners.filter((banner) => {
+    const startDate = new Date(banner.data.startDate);
+    const endDate = new Date(banner.data.endDate);
+    return currentDate >= startDate && currentDate <= endDate;
+});
+---
+
+{
+    activeBanners != null && (
+        <section class="bg-white dark:bg-[rgb(35,37,40)] flex-grow">
+            {activeBanners.map((banner) => (
+                <div class="mx-auto max-w-2xl px-4 py-8 mt-5 sm:px-6 sm:py-8 lg:max-w-7xl lg:px-8 bg-[rgb(238,214,218)] text-center rounded-md hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <h1 class="sm:text-2xl text-lg font-medium tracking-tight text-[rgb(71,126,194)] hover:scale-105 transition-transform duration-300 ease-in-out">
+                        <span class="font-semibold">{banner.data.title}</span>
+                        <br />
+                        {banner.data.description}
+                    </h1>
+                </div>
+            ))}
+        </section>
+    )
+}

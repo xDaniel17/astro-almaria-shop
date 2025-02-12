@@ -16,7 +16,7 @@
                         >
                             <a
                                 href="/"
-                                class="rounded-md px-3 py-2 text-m font-medium text-white"
+                                class="rounded-md px-3 py-2 font-semibold text-white"
                                 aria-current="page">Catálogo de productos</a
                             >
                             <!-- <a
@@ -135,7 +135,19 @@
         </div>
     </nav>
 </header>
-<style>
+<style is:global>
+    .logo-almaria-celeste {
+        width: 10rem;
+        content: url("/logo-almaria-celeste.png");
+    }
+
+    @media screen and (max-width: 640px) {
+        .logo-almaria-celeste {
+            width: 8rem;
+            content: url("/logo-almaria-celeste.png");
+        }
+    }
+
     .logo-almaria {
         width: 8rem;
         /* content: url("/logo-almaria-celeste.png"); */
