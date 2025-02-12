@@ -10,9 +10,9 @@ description: Vestido blanco con elástico en busco y cintura.
 description: Vestido blanco con elástico en busco y cintura.
 material: Poliester 
 sizes: 
-- xl
-- 1xl
-- 2xl
+- XL
+- 1XL
+- 2XL
 creationDate: 2025/02/01
 isSale: false
 isStock: true
