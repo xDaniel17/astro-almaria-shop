@@ -9,9 +9,9 @@ image:
 description: Vestido en tonos naranja y amarillo, manga larga, estilo midi.
 material: Poliester 
 sizes: 
-- s
-- m
-- l
+- S
+- M
+- L
 creationDate: 2025/02/01
 isSale: false
 isStock: true
