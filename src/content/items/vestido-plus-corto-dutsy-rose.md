@@ -11,7 +11,6 @@ material: Poliester
 sizes: 
     - xl
     - 1xl
-    - 2xl
 creationDate: 2025/02/01
 isSale: true    
 isStock: true
