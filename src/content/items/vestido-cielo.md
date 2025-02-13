@@ -9,10 +9,9 @@ image:
 description: Vestido corto con manga bombacha.
 material: Poliester 
 sizes: 
-- s
-- m
-- l
-- xl
+- S
+- M
+- L
 creationDate: 2025/02/01
 isSale: false
 isStock: true

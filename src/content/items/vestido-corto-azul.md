@@ -12,7 +12,6 @@ sizes:
 - s
 - m
 - l
-- xl
 creationDate: 2025/02/01
 isSale: false
 isStock: true
