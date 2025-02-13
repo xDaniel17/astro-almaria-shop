@@ -9,8 +9,8 @@ image:
 description: Vestido plus, cuello V, elástico en cintura.
 material: Poliester
 sizes: 
-    - xl
-    - 1xl
+    - XL
+    - 1XL
 creationDate: 2025/02/01
 isSale: true    
 isStock: true
