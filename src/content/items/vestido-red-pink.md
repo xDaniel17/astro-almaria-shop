@@ -4,8 +4,8 @@ title: Vestido Corto en tono Rosa Pastel y Rojo
 regularPrice: 56.60
 price: 41.39
 image: 
-    - vestido-red-pink-1.jpg
-    - vestido-red-pink-2.jpg
+    - vestido-red-pink-1.webp
+    - vestido-red-pink-2.webp
 description: Vestido corto, cuello V, manga corta elástico en cintura.
 material: Poliester
 sizes: 

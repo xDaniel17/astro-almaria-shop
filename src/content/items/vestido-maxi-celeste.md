@@ -4,8 +4,8 @@ title: Vestido Celeste con Azul
 regularPrice: 66.11
 price: 56.2
 image: 
-    - vestido-maxi-celeste-1.jpg
-    - vestido-maxi-celeste-2.jpg  
+    - vestido-maxi-celeste-1.webp
+    - vestido-maxi-celeste-2.webp  
 description: Vestido maxi, cuello V, elástico en busto y cintura.
 material: Algodón
 sizes: 

@@ -4,8 +4,8 @@ title: Vestido corto Azul
 regularPrice: 65.30
 price: 65.30
 image: 
-- vestido-corto-azul-1.jpg
-- vestido-corto-azul-2.jpg
+- vestido-corto-azul-1.webp
+- vestido-corto-azul-2.webp
 description: Vestido corto con manga bombacha y elástico en cintura.
 material: Algodón 
 sizes: 

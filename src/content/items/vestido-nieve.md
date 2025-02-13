@@ -4,8 +4,8 @@ title: Vestido nieve largo
 regularPrice: 32.50
 price: 32.50
 image: 
-- vestido-nieve-1.jpg
-- vestido-nieve-2.jpg
+- vestido-nieve-1.webp
+- vestido-nieve-2.webp
 description: Vestido de cuello alto, sin manga, con estampado de hojas azules.
 material: Poliester 
 sizes: 

@@ -4,8 +4,8 @@ title: Vestido Dusty Rose
 regularPrice: 46.70
 price: 39.69
 image: 
-    - vestido-plus-corto-dutsy-rose-1.jpg
-    - vestido-plus-corto-dutsy-rose-2.jpg
+    - vestido-plus-corto-dutsy-rose-1.webp
+    - vestido-plus-corto-dutsy-rose-2.webp
 description: Vestido plus, cuello V, elástico en cintura.
 material: Poliester
 sizes: 

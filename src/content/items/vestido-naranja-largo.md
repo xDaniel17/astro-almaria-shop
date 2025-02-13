@@ -4,8 +4,8 @@ title: Vestido Naranja largo
 regularPrice: 32.50
 price: 32.50
 image: 
-- naranja-largo-1.jpg
-- naranja-largo-2.jpg
+- vestido-naranja-largo-1.webp
+- vestido=naranja-largo-2.webp
 description: Vestido en tonos naranja y amarillo, manga larga, estilo midi.
 material: Poliester 
 sizes: 

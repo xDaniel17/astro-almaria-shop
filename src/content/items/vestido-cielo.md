@@ -4,8 +4,8 @@ title: Vestido Cielo corto
 regularPrice: 59.60
 price: 59.60
 image: 
-- vestido-cielo-corto-1.jpg
-- vestido-cielo-corto-2.jpg
+- vestido-cielo-corto-1.webp
+- vestido-cielo-corto-2.webp
 description: Vestido corto con manga bombacha.
 material: Poliester 
 sizes: 
