@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AlmariaHeader from "../components/almaria-header.astro";
+import AlmariaFooter from "../components/almaria-footer.astro";
+---
+
+<Layout title="Almaria Shop" description="Almaria Shop - ropa y accesorios">
+    <div class="flex flex-col min-h-screen">
+        <AlmariaHeader />
+        <section
+            class="flex flex-grow flex-col justify-center items-center content-center self-center"
+        >
+            <div>
+                <h1 class="text-3xl font-bold text-center">
+                    404 - Página no encontrada
+                </h1>
+                <p class="text-center my-4">La página que buscas no existe.</p>
+            </div>
+            <div class="py-8">
+                <a
+                    href="/"
+                    class="px-4 py-2 bg-[rgb(112,142,174)] text-white font-semibold rounded hover:bg-gray-600 dark:hover:bg-[rgb(148,106,105)] dark:bg-[rgb(188,142,150)]"
+                    >← Volver al inicio</a
+                >
+            </div>
+        </section>
+        <AlmariaFooter />
+    </div>
+</Layout>
