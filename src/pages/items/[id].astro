@@ -92,9 +92,10 @@ const today = new Date();
                                         }
                                     </div>
                                 </div>
-                                {isSale &&
+                                {
+                                    isSale &&
                                         today >= startDate &&
-                                        today <= endDate && (
+                                        today < endDate && (
                                             <span class="absolute top-2 left-2 bg-red-500 text-white font-semibold px-2 py-1 rounded">
                                                 Oferta
                                             </span>
@@ -132,9 +133,10 @@ const today = new Date();
                             </p>
 
                             <div class="mt-4">
-                                {isSale &&
+                                {
+                                    isSale &&
                                     today >= startDate &&
-                                    today <= endDate ? (
+                                    today < endDate ? (
                                         <div class="text-lg font-medium text-gray-900 dark:text-gray-100">
                                             <p>
                                                 <span class="line-through text-gray-500 dark:text-gray-400">
