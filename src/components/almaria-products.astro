@@ -1,21 +1,28 @@
 ---
 import { getCollection } from "astro:content";
+
+// Obtener la colección de items
 const items = await getCollection("items");
 
+// Ordenar los items
 const sortedItems = items
     .filter((item) => item.data.isStock)
     .sort((a, b) => {
         const { data: dataA } = a;
         const { data: dataB } = b;
 
-        // Primero, ordenar por oferta (isSale: true primero)
+        // Ordenar por fecha de creación (más nuevo primero)
+        const dateA = new Date(dataA.creationDate).getTime();
+        const dateB = new Date(dataB.creationDate).getTime();
+        if (dateA !== dateB) {
+            return dateB - dateA; // Ordenar de más nuevo a más antiguo
+        }
+
+        // Si las fechas son iguales, ordenar por oferta (isSale: true primero)
         if (dataA.isSale && !dataB.isSale) return -1;
         if (!dataA.isSale && dataB.isSale) return 1;
 
-        // Segundo, ordenar por fecha de creación (más nuevo primero)
-        const dateA = new Date(dataA.creationDate).getTime();
-        const dateB = new Date(dataB.creationDate).getTime();
-        return dateB - dateA; // Ordenar de más nuevo a más antiguo
+        return 0; // Si ambos tienen la misma condición de oferta y fecha, no cambiar el orden
     });
 
 //console.log(sortedItems);
