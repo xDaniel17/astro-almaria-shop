@@ -12,7 +12,7 @@ sizes:
 - XL
 - 1XL
 - 2XL
-creationDate: 2025/02/01
+creationDate: "2025/02/01"
 isSale: false
 isStock: true
 startDate: "2025-02-11"

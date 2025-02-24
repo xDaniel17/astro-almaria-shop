@@ -10,9 +10,8 @@ description: Vestido maxi, cuello V, elástico en  cintura y bolsas a los lados.
 material: Algodón
 sizes: 
     - XL
-    - 1XL
     - 2XL
-creationDate: 2025/02/01
+creationDate: "2025/02/01"
 isSale: true
 isStock: true
 startDate: "2025-02-11"

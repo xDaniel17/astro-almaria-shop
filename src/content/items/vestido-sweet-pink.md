@@ -10,7 +10,7 @@ description: Vestido midi, cuello V, manga corta, elástico en cintura.
 material: Algodón
 sizes: 
 - S
-creationDate: 2025/02/01
+creationDate: "2025/02/01"
 isSale: true
 isStock: true
 startDate: "2025-02-11"

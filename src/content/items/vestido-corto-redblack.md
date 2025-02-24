@@ -13,7 +13,7 @@ sizes:
 - M
 - L
 - XL
-creationDate: 2025/02/01
+creationDate: "2025/02/01"
 isSale: true
 isStock: true
 startDate: "2025-02-11"
