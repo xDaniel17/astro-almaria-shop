@@ -6,7 +6,7 @@ price: 70.75
 image: 
 - vestido-amaia-1.webp
 - vestido-amaia-2.webp
-description: Vestido blanco con estampado verde, cuello alto y lazo en cintura.
+description: Vestido blanco con estampado verde, cuello alto, lazo en cintura.
 material: Algodón.
 sizes: 
 - S
