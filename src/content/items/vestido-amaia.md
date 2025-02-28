@@ -2,7 +2,7 @@
 id: vestido-amaia
 title: Vestido Amaia 
 regularPrice: 70.75
-price: 60.75
+price: 70.75
 image: 
 - vestido-amaia-1.webp
 - vestido-amaia-2.webp
