@@ -11,7 +11,6 @@ material: Poliester.
 sizes: 
 - S
 - M
-- L
 creationDate: "2025/02/24"
 isSale: false
 isStock: true
