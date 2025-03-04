@@ -11,7 +11,6 @@ material: Algodón.
 sizes: 
 - S
 - M
-- l
 creationDate: "2025-02-24"
 isSale: false
 isStock: true
