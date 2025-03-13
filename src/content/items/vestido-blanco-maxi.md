@@ -10,8 +10,6 @@ description: Vestido corto, zipper en la espalda, bombacho en la parte de abajo.
 material: Poliester 
 sizes: 
     - S
-    - M
-    - L
 creationDate: "2025/02/01"
 isSale: true
 isStock: true
