@@ -10,7 +10,6 @@ description: Vestido estilo midi con bordad inglés.
 material: Algodón.
 sizes: 
 - S
-- M
 creationDate: "2025-02-24"
 isSale: false
 isStock: true
