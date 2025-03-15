@@ -10,7 +10,6 @@ description: Vestido corto con cincho ne cintura.
 material: Algodón.
 sizes: 
 - S
-- M
 - l
 - XL
 creationDate: "2025/02/24"
