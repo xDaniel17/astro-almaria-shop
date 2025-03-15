@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AlmariaProducts from "../components/almaria-products.astro";
+import AlmariaHeader from "../components/almaria-header.astro";
+import AlmariaFooter from "../components/almaria-footer.astro";
+import AlmariaBanner from "../components/almaria- banner.astro";
+---
+<Layout title="Almaria Shop" description="Almaria Shop - ropa y accesorios">
+    <div class="flex flex-col min-h-screen">
+        <AlmariaHeader />
+        <AlmariaBanner />
+        <AlmariaProducts />
+        <AlmariaFooter />
+    </div>
+</Layout>

@@ -2,7 +2,7 @@
 id: vestido-corto-azul
 title: Vestido corto Azul 
 regularPrice: 65.30
-price: 65.30
+price: 52.24
 image: 
 - vestido-corto-azul-1.webp
 - vestido-corto-azul-2.webp
