@@ -2,7 +2,7 @@
 id: vestido-cielo-corto
 title: Vestido Cielo corto 
 regularPrice: 59.60
-price: 59.60
+price: 47.68
 image: 
 - vestido-cielo-corto-1.webp
 - vestido-cielo-corto-2.webp
@@ -13,8 +13,8 @@ sizes:
 - M
 - L
 creationDate: "2025/02/01"
-isSale: false
+isSale: true
 isStock: true
-startDate: "2025-02-11"
-endDate: "2025-02-15"
+startDate: "2025-03-14"
+endDate: "2025-03-23"
 ---

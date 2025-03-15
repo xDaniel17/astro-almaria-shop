@@ -16,6 +16,6 @@ sizes:
 creationDate: "2025/02/01"
 isSale: true
 isStock: true
-startDate: "2025-02-11"
-endDate: "2025-02-15"
+startDate: "2025-03-14"
+endDate: "2025-03-23"
 ---
