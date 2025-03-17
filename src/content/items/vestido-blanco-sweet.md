@@ -9,7 +9,6 @@ image:
 description: Vestido midi, manga corta, falda en tono azul.
 material: Algodón
 sizes: 
-- S
 - M
 - L
 creationDate: "2025/03/15"
