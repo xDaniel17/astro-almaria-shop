@@ -10,7 +10,6 @@ description: Vestido blanco con estampado verde, cuello alto, lazo en cintura.
 material: Algodón.
 sizes: 
 - S
-- M
 - XL
 creationDate: "2025/02/24"
 isSale: false
