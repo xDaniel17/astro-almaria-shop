@@ -9,9 +9,8 @@ image:
 description: Vestido corto con manga bombacha y elástico en cintura.
 material: Algodón 
 sizes: 
-- s
-- m
-- l
+- S
+- M
 creationDate: "2025/02/01"
 isSale: true
 isStock: true
