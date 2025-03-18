@@ -10,7 +10,6 @@ description: Vestido corto, cuello V, manga corta elástico en cintura.
 material: Poliester
 sizes: 
 - S
-- M
 - L
 creationDate: "2025/02/01"
 isSale: true
